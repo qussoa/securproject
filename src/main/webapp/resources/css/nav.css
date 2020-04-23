@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box
+}
+
+body {
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+}
+
+#navbar {
+	background-color: #0062cc;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	transition: top 0.3s;
+	z-index: 100;
+}
+
+#navbar a {
+	flex: 0 1 auto;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+#navbar a:hover {
+	background-color: white;
+	color: #0062cc;
+}
+
+#navbar a:nth-child(3) {
+	margin-left: 0 auto;
+}

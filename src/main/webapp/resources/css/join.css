@@ -1,0 +1,47 @@
+.join-container {
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+
+.join-form {
+	justify-content: center;
+	padding: 5%;
+	margin:20px auto;
+}
+
+.join-form h3 {
+	text-align: center;
+	color:#0062cc;
+	font-weight: bold;
+}
+
+.join-container form {
+	padding: 10%;
+}
+
+.btnSubmit {
+	width: 50%;
+	border-radius: 1rem;
+	padding: 1.5%;
+	border: none;
+	cursor: pointer;
+}
+
+.join-form .btnSubmit {
+	font-weight: 600;
+	color: #fff;
+	background-color: #0062cc;
+}
+
+.join-form .ForgetPwd {
+	color: #0062cc;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.join-form .checkbox {
+	
+	color : #0062cc;
+}

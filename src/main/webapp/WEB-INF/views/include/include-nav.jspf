@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="rootPath" value="${pageContext.request.contextPath }" />
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<link rel="stylesheet"
+	href="${rootPath}/resources/css/nav.css?2020-04-09" />
+<script>
+	$(function() {
+
+		var preScrollpos = $(window).scrollTop()
+		$(window).scroll(function() {
+
+			let currentScrollpos = $(window).scrollTop()
+			if (preScrollpos > currentScrollpos) {
+				$("#navbar").css("top", 0)
+			} else {
+				$("#navbar").css("top", "-60px")
+			}
+			preScrollpos = currentScrollpos
+		})
+		$(document).on("click", "a.logout", function() {
+			if (confirm("로그아웃하시겠오?")) {
+				$.post("${rootPath}/logout",
+						{${_csrf.parameterName}:"${_csrf.token}"},function(){
+					document.location.replace("${rootPath}/")
+				})
+				//$("form#logout").submit()
+				
+			}
+		})
+	})
+</script>
+<nav id="navbar">
+	<a href="${rootPath}/">LEE JEONG YEON</a>
+
+	<sec:authorize access="isAnonymous()">
+		<a href="${rootPath}/user/login">로그인</a>
+	</sec:authorize>
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+		<a href="${rootPath}/admin">관리자 홈</a>
+	</sec:authorize>
+	<sec:authorize access="isAuthenticated()">
+		<a href="${rootPath}/user/mypage">MY PAGE</a>
+		<a href="javascript:void(0)" class="logout">로그아웃</a>
+	</sec:authorize>
+
+</nav>
+
+
+

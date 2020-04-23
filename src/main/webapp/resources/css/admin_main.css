@@ -1,0 +1,37 @@
+
+#body-section {
+	justify-content:center;
+	position: fixed;
+	top: 60px;
+	width: 100%;
+
+}
+
+#body-section menu {
+	
+
+	margin: 5px;
+}
+
+#body-section menu li {
+	list-style: none;
+}
+
+#body-section menu li a {
+	display: inline-block;
+	padding: 5px 10px;
+	text-decoration: none;
+	width: 150px;
+	margin: 10px;
+	color: black;
+}
+
+#body-section menu li a:hover {
+	background-color: black;
+	color: white;
+}
+
+#body-section article {
+
+	margin: 5px;
+}

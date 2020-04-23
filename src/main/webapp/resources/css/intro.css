@@ -1,0 +1,80 @@
+@charset "UTF-8";
+body {
+  min-height: 100vh;
+  color: #0062cc;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.blinking-cursor {
+  pointer-events: none;
+  user-select: none;
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+.myname{
+	color:#f4a42c;
+	font-weight: bold;
+	
+}
+
+.hash-tag{
+	color: #f4a42c;
+}
+
+.intro-co{
+	color:#797c80;
+	
+}
+div.container-intro {
+	margin-top: 100px;
+}
+
+.my-img {
+	width: 200px;
+	height: 200px;
+}
+
+.github {
+	height: 50px;
+}
+
+.main-story {
+	text-align: center;
+}
+
+.test {
+	width: 60%;
+}
+
+#text-write-title {
+	font-weight: bold;
+	color: #f4a42c;
+}
+
+p#text-write-sub {
+	font-size: 15px;
+	line-height: 50%;
+	color: #8b8f94;
+}
+
+.date-de {
+	color: #f4a42c;
+	font-weight: bold;
+}
+
+.de-write {
+	color: #8b8f94;
+}
+
+.main-story-title{
+	color: #0b509c;
+	
+}
