@@ -13,6 +13,10 @@
 * 회원가입 E-mail 인증
 * 비밀번호 분실 E-mail 인증 후 재 설정
 
+* 자세한 사항은 여기를 클릭해주세요
+
+> [PPT 보기](./2020-04-23_secur_project.pdf)
+
 ### Spring Security Dependency
 * spring seucurity 설정
 * spring-security-core
